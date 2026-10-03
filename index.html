@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do List Application</title>
+    <! -- bootstrap icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="todo-card">
+      <h2>To do List App</h2>
+      <div class="stat-container">
+        <div class="details">
+          <h3>Total Tugas</h3>
+          <div id="progressbar">
+            <div id="progress"></div>
+          </div>
+        </div>
+        <div class="stats-number">
+          <p id="numbers">0 / 0</p>
+        </div>
+      </div>
+      <form action="#" class="todo-form" id="todo_form">
+        <div class="form-input">
+          <input
+            type="text"
+            id="task"
+            class="input-field"
+            placeholder="Please enter what you want to do"
+            required
+          />
+        </div>
+        <div class="form-input">
+          <input type="date" id="when" class="input-field" required />
+        </div>
+        <div class="tombol">
+          <button type="submit" id="simpan" class="simpan" title="simpan todo">
+            Save it
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="card-search">
+      <div class="form-input">
+        <input
+          type="text"
+          id="search_task"
+          class="input-field"
+          placeholder="find todo.."
+        />
+        <button type="button" class="search_btn" id="search_btn">
+          <i class="bi bi-binoculars-fill" title="cari todo"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="card-pending">
+      <h3>Belum Selesai Dikerjakan</h3>
+      <ul id="todo_pending"></ul>
+    </div>
+
+    <div class="card-done">
+      <h3>Selesai Dikerjakan</h3>
+      <ul id="todo_done"></ul>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
